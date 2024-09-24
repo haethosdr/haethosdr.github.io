@@ -7,11 +7,13 @@
     src: url(0f220b52f43e80d3c03f.ttf);
     font-weight: medium;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Noto Sans';
     src: url(b1d0ab70303caea663db.ttf);
+    font-display: swap;
 }
 
 * {
@@ -76,21 +78,31 @@ html, body {
     color: rgba(219, 153, 36, 1);
 }
 
+.top-btn-cont {
+    display: flex;
+    gap: 5px;
+}
+
 .request-button {
     inset: all;
     border: none;
     box-sizing: border-box;
     cursor: pointer;
     font-family: tahoma;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 550;
     border-radius: 5px;
     padding: 10px 13px;
     color: rgba(219, 153, 36, 1);
-    background: rgba(33, 80, 173, 1);
+    /* border: 1px solid rgba(219, 153, 36, 1); */
+    /* background: rgba(33, 80, 173, 1); */
+    background: rgba(26, 48, 120, 1);
+    letter-spacing: .1rem;
 }
 
 .request-button:hover {
     background: rgba(16, 28, 86, 1);
+    /* background: rgba(3, 6, 51, 1); */
 }
 
 .top-mid-quote {
@@ -411,10 +423,12 @@ html, body {
     all: unset;
     text-align: center;
     border: 1px solid black;
+    font-size: 1rem;
+    font-weight: 550;
     border-radius: 3px;
     padding: 7px 30px;
     color: rgba(232, 123, 11, 1);
-    background: rgba(33, 80, 173, .8);
+    background: rgba(33, 80, 173, 1);
     min-width: max-content;
 }
 
@@ -500,9 +514,10 @@ html, body {
 .req-button {
     all: unset;
     padding: 8px 20px;
-    background: rgba(33, 80, 173, .9);
+    background: rgba(33, 80, 173, 1);
     color: rgba(232, 123, 11, 1);
     font-size: 1rem;
+    font-weight: 550;
 }
 
 .req-button:hover {
@@ -522,7 +537,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     box-sizing: border-box;
     height: 35px;
     min-width: 100%;
@@ -551,7 +565,6 @@ html, body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     border-radius: 4px;
     background: rgba(33, 80, 173, .1);
     position: relative;
@@ -618,7 +631,8 @@ html, body {
 
 /* LOWER INTRO SECTION  */
 .intro-wrap {
-    min-height: 650px;
+    box-sizing: border-box;
+    min-height: 660px;
     padding-top: 30px;
     padding-left: 25px;
     padding-right: 25px;
@@ -627,8 +641,6 @@ html, body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    box-sizing: border-box;
     gap: 20px;
 }
 
@@ -699,7 +711,9 @@ html, body {
     box-sizing: border-box;
     font-family: tahoma;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 550;
+    letter-spacing: .1rem;
     border-radius: 3px;
     padding: 10px 30px;
     color: rgba(219, 153, 36, 1);
@@ -712,10 +726,10 @@ html, body {
 
 /* FOOTER SECTION */
 .index-footer {
-    min-height: 400px;
+    min-height: 430px;
     display: flex;
     justify-content: center;
-    background: rgba(14, 165, 233, .9);
+    background: rgba(14, 165, 233, 1);
     position: relative;
 }
 
@@ -744,7 +758,20 @@ html, body {
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 400px;
+    max-width: 430px;
+}
+
+.foot-contact-left > h2 {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.foot-contact-left > h3 {
+    color: rgba(234, 179, 8, 1);
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Noto Sans';
 }
 
 .foot-contact-left > span {
@@ -779,11 +806,19 @@ html, body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-top: 25px;
+    padding-bottom: 5px;
 }
 
 #phone-number {
+    margin: 0;
+    padding: 0;
+    width: max-content;
     font-size: 2.5rem;
     color: rgba(240, 233, 221, 1);
+    border-bottom: .1px solid rgba(240, 233, 221, .4);
+    padding-bottom: 3px;
+    font-family: 'Noto Sans';
 }
 
 #phone-number > a {
@@ -794,10 +829,16 @@ html, body {
     color: rgba(219, 153, 36, .8);
 }
 
+.foot-link {
+    border-bottom: .1px solid rgba(240, 233, 221, .4);
+}
+
 .foot-link > a {
-    color: rgba(219, 153, 36, 1);
-    font-size: 1rem;
+    color: rgba(240, 233, 221, 1);
+    /* color: rgba(219, 153, 36, 1); */
+    font-size: .9rem;
     font-weight: 500;
+    
 }
 
 
@@ -891,19 +932,19 @@ html, body {
         text-align: center;
     }
 
-    #phone-number {
+    /* #phone-number {
         margin: 0;
         padding: 5px;
-    }
+    } */
 
     #phone-number > a:active {
         color: rgba(219, 153, 36, 1);
     }
 
-    .foot-links {
+    /* .foot-links {
         padding-top: 5px;
         padding-bottom: 5px;
-    }
+    } */
 
     .footer-logo {
         display: block;
@@ -939,6 +980,11 @@ html, body {
 }
 
 @media screen and (width < 401px) { 
+    .top-btn-cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .serv-main-quote {
         padding-top: 30px;
     }
@@ -988,4 +1034,4 @@ html, body {
 
 
 
-/*# sourceMappingURL=index.0db84678043fea19002c.css.map*/
+/*# sourceMappingURL=index.8ef87f80b4a3681ed1c1.css.map*/
