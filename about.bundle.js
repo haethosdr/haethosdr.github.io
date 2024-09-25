@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navOpenBtn = elem('#mobile-nav-btn');
     const navDialog = elem('#mobile-dialog');
     const closeDiaNav = elem('.nav-close-btn');
+    const servicesSymb = document.querySelector('.dia-menu-symb');
 
     navOpenBtn.addEventListener('click', () => {
         navDialog.style.display = 'flex';
@@ -142,12 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
         subNavDisplay.style.display = 'none';
         document.body.style.overflow = '';
         navDialog.style.display = 'none';
+        servicesSymb.textContent = '+';
     });
 
     // nav subservice menu opening
     const subNavbtn = document.querySelector('#services-nav');
     const subNavDisplay = document.querySelector('#nav-srvc-menu');
-    const servicesSymb = document.querySelector('.dia-menu-symb');
     subNavbtn.addEventListener('click', () => {
         if (subNavDisplay.style.display === 'none') {
             subNavDisplay.style.display = 'flex';
