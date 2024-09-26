@@ -28,7 +28,8 @@ a {
 html, body {
     margin: 0;
     padding: 0;
-    background: rgba(245, 224, 224, 1);
+    /* background: rgba(245, 224, 224, 1); */
+    background: rgba(185, 165, 175, .3);
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -962,4 +963,4 @@ section > .about-cont-wrap {
 }
 
 
-/*# sourceMappingURL=services.cf996c3d2ae921a10280.css.map*/
+/*# sourceMappingURL=services.da48eddd909402c72782.css.map*/

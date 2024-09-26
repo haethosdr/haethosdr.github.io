@@ -557,6 +557,7 @@ html, body {
     padding-right: 10px;
     font-size: 1.9rem;
     letter-spacing: .1rem;
+    color: rgba(1, 26, 65, 1);
 }
 
 .slider {
@@ -593,17 +594,18 @@ html, body {
     width: 100%;
 }
 
-.quote-slide span:first-child {
+.quote-slide > .quote-text {
+    margin: 0;
     letter-spacing: .1rem;
     box-sizing: border-box;
-    padding-bottom: 7px;
+    padding-bottom: 10px;
     padding-left: 10px;
     width: 400px;
     font-style: italic;
 }
 
-.quote-slide span:last-child {
-    font-size: .8rem;
+.quote-slide > span {
+    font-size: .9rem;
 }
 
 
@@ -1092,4 +1094,4 @@ html, body {
 
 
 
-/*# sourceMappingURL=index.113ab33be35a2caa6edf.css.map*/
+/*# sourceMappingURL=index.24211576eebb09e28fe9.css.map*/
