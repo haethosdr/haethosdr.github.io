@@ -56,7 +56,8 @@ html, body {
 
 #landing-wrap-winwash {
     background-image: url(ac4321e6ab639487f744.jpeg);
-    background-size: cover; /* or contain? */
+    background-size: cover;
+    -webkit-background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -254,6 +255,7 @@ html, body {
     width: 100vw;
     height: 100vh;
     background: rgba(1, 36, 86, 0.4);
+    -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
     z-index: 1000;
     border: none;
@@ -963,4 +965,4 @@ section > .about-cont-wrap {
 }
 
 
-/*# sourceMappingURL=services.da48eddd909402c72782.css.map*/
+/*# sourceMappingURL=services.47017263c89b628efe3e.css.map*/

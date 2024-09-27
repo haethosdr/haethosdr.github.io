@@ -47,6 +47,7 @@ html, body {
 #landing-wrap {
     background-image: url(ac4321e6ab639487f744.jpeg);
     background-size: cover;
+    -webkit-background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
     
@@ -67,6 +68,7 @@ html, body {
     max-height: 900px;
     width: 100%;
     background: rgba(135, 121, 171, 0.3);
+    -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
     z-index: 1;
 
@@ -260,7 +262,6 @@ html, body {
     cursor: pointer;
 }
 
-
 /* nav overlay dialog menu */
 #mobile-dialog {
     display: none;
@@ -272,6 +273,7 @@ html, body {
     width: 100vw;
     height: 100vh;
     background: rgba(1, 36, 86, 0.4);
+    -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
     z-index: 1000;
     border: none;
@@ -911,4 +913,4 @@ textarea.form-input-field {
 
 
 
-/*# sourceMappingURL=contact.cc7ab309575dee059637.css.map*/
+/*# sourceMappingURL=contact.a61c05d45ee11e6966a4.css.map*/
