@@ -43,7 +43,7 @@ html, body {
     background-image: url(ac4321e6ab639487f744.jpeg);
     background-size: cover;
     -webkit-background-size: cover;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-position: center;
 
     display: flex;
@@ -909,8 +909,8 @@ html, body {
 
 /* MEDIA QUERIES */
 @media screen and (width < 741px) {
-    #top-landing-page {
-        justify-content: end;
+    .top-landing-page {
+        background-attachment: scroll;
     }
 
     .sub-content {
@@ -1098,4 +1098,4 @@ html, body {
 
 
 
-/*# sourceMappingURL=index.e26f5df583880e67d590.css.map*/
+/*# sourceMappingURL=index.2234d86cbcb1d2942b9a.css.map*/
