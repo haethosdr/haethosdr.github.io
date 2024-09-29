@@ -1,23 +1,28 @@
-name: Deploy to Server
+name: Deploy to DigitalOcean
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if necessary
+      - main  # or whatever branch you want to use
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Copy files to server
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.SERVER_IP }}
-        username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        source: "."
-        target: "/home/haethosdr.github.io"
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to DigitalOcean
+        run: |
+          ssh -o StrictHostKeyChecking=no root@64.23.147.56 << 'EOF'
+            cd /home/haethosdr.github.io
+            git pull origin main
+            # Restart the service if necessary
+            sudo systemctl restart nginx  # or your web server
+          EOF
